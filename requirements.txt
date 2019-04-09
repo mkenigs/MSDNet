@@ -2,3 +2,4 @@ tables
 sqlalchemy
 pandas
 progressbar
+mysqlclient
