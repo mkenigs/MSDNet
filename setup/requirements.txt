@@ -3,9 +3,3 @@ sqlalchemy
 pandas
 progressbar
 mysqlclient
-
-tensorboardX
-torchvision
-tf-nightly #?
-
-absl-py
