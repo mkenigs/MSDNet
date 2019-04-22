@@ -4,12 +4,12 @@
 * Edit settings in settings.py.
 * Edit glove_path in word2vec.py
 
-## Databases
+# Databases
 * mbzdb: clone from https://github.com/elliotchance/mbzdb and run `./init.pl` after editing settings
 * msd: run `./getMSD.sh` after editing `settings.py`
 * mxm: run `./getMXM.sh`
 
-## Tensorboard
+# Tensorboard
 * install bazel 0.20.0
 * `git submodule update --init --recursive`
 * `bazel run //greeter_tensorboard --incompatible_remove_native_http_archive=false -- --logdir=/tmp/greeter_demo`
