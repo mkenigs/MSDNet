@@ -1,4 +1,4 @@
-# Running
+# Setup
 * Download glove dataset for neural word embedding http://nlp.stanford.edu
 * Create a database in MySQL server. You do NOT need to create a table.
 * Edit settings in settings.py.
@@ -9,16 +9,15 @@
 * mxm: run `./getMXM.sh`
 * msd: run `./getMSD.sh` after editing `settings.py`
 
+# Running
+* install bazel 0.20.0
+* `bazel run //greeter_tensorboard --incompatible_remove_native_http_archive=false -- --logdir=/tmp/greeter_demo`
+
 # Project Structure
-* normalizeMSD.sql:
-  * Normalizes MSD dataset and loads into sqlserver
-* main.py
+* train.py
   * Runs all the scripts needed to setup the neural word embedding dictionary, requests subset of data from SQL server, and trains the neural network. 
 * frontend:
-  * Input: Selected list of features for the neural network's training data
-  * Output: Prediction for year in which song was written
   * Uses Tensorboard as front end with check boxes to select desired features for training data. Python backend parses input and requests from SQL server a subset of data based on the specified criteria. The subset of data is then forwarded through a fully-connected neural net. The neural network trains and learns to predict the year in which an input song was written.
-
 * Neural net:
   * Input 1: subset of training data about song information
   * Output 1: a trained neural network model
