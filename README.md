@@ -1,11 +1,13 @@
 # Running
-* Download 10,000 song subset: http://static.echonest.com/millionsongsubset_full.tar.gz
-* Download glove dataset for neural word embedding http://nlp.stanford.edu/data/wordvecs/glove.6B.zip
-* Run ```pip3 install -r requirements.txt```
+* Download glove dataset for neural word embedding http://nlp.stanford.edu
 * Create a database in MySQL server. You do NOT need to create a table.
 * Edit settings in settings.py.
 * Edit glove_path in word2vec.py
-* Run ```python3 hdf5_to_sql.py```
+
+# Databases
+* mbzdb: clone from https://github.com/elliotchance/mbzdb and run `./init.pl` after editing settings
+* mxm: run `./getMXM.sh`
+* msd: run `./getMSD.sh` after editing `settings.py`
 
 # Project Structure
 * normalize.sql:
