@@ -1,5 +1,6 @@
 # Running
 * Download 10,000 song subset: http://static.echonest.com/millionsongsubset_full.tar.gz
+* Download glove dataset for neural word embedding http://nlp.stanford.edu/data/wordvecs/glove.6B.zip
 * Run ```pip3 install -r requirements.txt```
 * Create a database in MySQL server. You do NOT need to create a table.
 * Edit settings in settings.py.
