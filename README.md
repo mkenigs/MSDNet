@@ -11,6 +11,7 @@
 
 # Running
 * install bazel 0.20.0
+* git submodule update --init --recursive
 * `bazel run //greeter_tensorboard --incompatible_remove_native_http_archive=false -- --logdir=/tmp/greeter_demo`
 
 # Project Structure
