@@ -1,0 +1,3 @@
+[submodule "MSD-tensorboard-plugin"]
+	path = MSD-tensorboard-plugin
+	url = https://github.com/mkenigs/MSD-tensorboard-plugin
