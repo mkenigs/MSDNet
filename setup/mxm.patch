@@ -1,0 +1,29 @@
+--- mxm.sql	2019-04-21 23:03:59.161482316 -0500
++++ mxm.sql	2019-04-11 22:44:00.406286224 -0500
+@@ -1,6 +1,9 @@
+-PRAGMA foreign_keys=OFF;
+-BEGIN TRANSACTION;
+-CREATE TABLE words (word TEXT PRIMARY KEY);
++-- PRAGMA foreign_keys=OFF;
++-- BEGIN TRANSACTION;
++CREATE DATABASE mxm;
++USE mxm;
++ALTER DATABASE mxm CHARACTER SET = utf8mb4;
++CREATE TABLE words (word TEXT);
+ INSERT INTO words VALUES('i');
+ INSERT INTO words VALUES('the');
+ INSERT INTO words VALUES('you');
+@@ -5001,7 +5004,7 @@
+ INSERT INTO words VALUES('gee');
+ INSERT INTO words VALUES('colleg');
+ INSERT INTO words VALUES('kad');
+-CREATE TABLE lyrics (track_id, mxm_tid INT, word TEXT, count INT, is_test INT, FOREIGN KEY(word) REFERENCES words(word));
++CREATE TABLE lyrics (track_id VARCHAR(25), mxm_tid INT, word TEXT, count INT, is_test INT);
+ INSERT INTO lyrics VALUES('TRAAAAV128F421A322',4623710,'i',6,0);
+ INSERT INTO lyrics VALUES('TRAAAAV128F421A322',4623710,'the',4,0);
+ INSERT INTO lyrics VALUES('TRAAAAV128F421A322',4623710,'you',2,0);
+@@ -19050339,4 +19050342,3 @@
+ CREATE INDEX idx_lyrics3 ON lyrics ('word');
+ CREATE INDEX idx_lyrics4 ON lyrics ('count');
+ CREATE INDEX idx_lyrics5 ON lyrics ('is_test');
+-COMMIT;
