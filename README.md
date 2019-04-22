@@ -10,16 +10,17 @@
 * msd: run `./getMSD.sh` after editing `settings.py`
 
 # Project Structure
-* normalize.sql:
-  * Normalizes common voice data set and loads into sqlserver
-
+* normalizeMSD.sql:
+  * Normalizes MSD dataset and loads into sqlserver
+* main.py
+  * Runs all the scripts needed to setup the neural word embedding dictionary, requests subset of data from SQL server, and trains the neural network. 
 * frontend:
-  * Input: mp3, list of sentences from common voice data set
-  * Output: classification of mp3
-  * Uses JS or PHP to SELECT subset from SQL database. Sends subset to neural net. Waits for neural net to train. Sends neural net mp3 and list of sentences, gets classification back
+  * Input: Selected list of features for the neural network's training data
+  * Output: Prediction for year in which song was written
+  * Uses Tensorboard as front end with check boxes to select desired features for training data. Python backend parses input and requests from SQL server a subset of data based on the specified criteria. The subset of data is then forwarded through a fully-connected neural net. The neural network trains and learns to predict the year in which an input song was written.
 
 * Neural net:
-  * Input 1: subset
-  * Output 1: nothing, but trains on subset
-  * Input 2: mp3 and list of sentences
-  * Output 2: classification
+  * Input 1: subset of training data about song information
+  * Output 1: a trained neural network model
+  * Input 2: subset of test data about song information
+  * Output 2: classification (predicted year), and a log used for visualization with Tensorboard.
