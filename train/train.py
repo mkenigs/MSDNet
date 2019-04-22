@@ -13,7 +13,7 @@ import os
 
 def train(select_features):
     msd, mxm, mbzdb = MC.connect_to_database()
-    feature_query = PQ.get_features(where_clause='year>1960 and year<2000', table='megarelation',
+    feature_query = PQ.get_features(where_clause='', table='megarelation',
                                     select_features=select_features)
 
     features = MC.get_output_from_database(database=msd, query=feature_query)
