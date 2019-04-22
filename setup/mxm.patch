@@ -18,7 +18,7 @@
  INSERT INTO words VALUES('colleg');
  INSERT INTO words VALUES('kad');
 -CREATE TABLE lyrics (track_id, mxm_tid INT, word TEXT, count INT, is_test INT, FOREIGN KEY(word) REFERENCES words(word));
-+CREATE TABLE lyrics (track_id VARCHAR(25), mxm_tid INT, word TEXT, count INT, is_test INT);
++CREATE TABLE lyrics (track_id VARCHAR(25) PRIMARY KEY, mxm_tid INT, word TEXT, count INT, is_test INT);
  INSERT INTO lyrics VALUES('TRAAAAV128F421A322',4623710,'i',6,0);
  INSERT INTO lyrics VALUES('TRAAAAV128F421A322',4623710,'the',4,0);
  INSERT INTO lyrics VALUES('TRAAAAV128F421A322',4623710,'you',2,0);
