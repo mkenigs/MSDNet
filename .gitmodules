@@ -1,3 +1,0 @@
-[submodule "tensorboard"]
-	path = tensorboard
-	url = http://github.com/mkenigs/tensorboard.git
